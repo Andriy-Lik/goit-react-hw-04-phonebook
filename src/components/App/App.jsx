@@ -13,9 +13,8 @@ import { Title, Span } from './App.styled';
 
 const getInitialContacts = () => {
   const contacts = localStorage.getItem('contacts');
-  
-  if (contacts !== null) {
-    const parsedContacts = JSON.parse(contacts);
+  const parsedContacts = JSON.parse(contacts);
+  if (parsedContacts) {
     return parsedContacts;
   } else {
     return initialContacts;
